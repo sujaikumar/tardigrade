@@ -1,7 +1,7 @@
 # tardigrade
 Scripts and relevant processed data files for  Boothby et al 2015 and Koutsovoulos et al 2015 tardigrade genome papers
-Results:
------
+
+## PacBio Verification Results:
 
 Using UNC's own gene model GFF file, only **713** adjacent metazoa-nonmetazoa pairs of genes could be found. Of these, only **26** are fully spanned by UNC's own PacBio scaffolds (using their own mapping file).
 
@@ -9,10 +9,7 @@ If this analysis is repeated using eukaryote-noneukaryote as the classification,
 
 I'm putting the scripts and intermediate data files at github.com/sujaikumar/tardigrade so that they can be scrutinised to make sure I haven't done anything silly. I'd be grateful for comments on these analyses before we put them in to our manuscript. Thanks!
 
-Steps:
------
-
-###Overview
+### Overview
 
 1. Classify protein predictions as being Metazoa / NonMetazoa / NotSure
 
