@@ -13,7 +13,7 @@ Only 294 gene pairs matched these requirements (euk-noneuk adjacent on same scaf
 
 Repeating this for Metazoa-Nonmetazoa pairs, 713 such pairs remain (some of the euk-euk pairs become meta-nonmeta, and so the number of meta-nonmeta pairs went up). Of those, only 26 were verified by PacBio scaffolds.
 
-Details of scripts/commands are below (I hope I've not made any mistakes as it is 430am! If someone could double check my numbers I'd be very grateful).
+Details of scripts/commands are below (I hope I've not made any mistakes as it is 5am! If someone could double check my numbers I'd be very grateful).
 
 In summary, although UNC state that the PacBio data verify their assembly, the reality (assuming my analysis is correct) is that only 10 euk-noneuk (or 26 metazoa-nonmetazoa) gene pairs are actually verified by their data.
 
@@ -63,13 +63,17 @@ In summary, although UNC state that the PacBio data verify their assembly, the r
             perl daa_to_tagc.pl \
                 /exports/blast_db/uniref100.taxlist \
                 tg.default.maker.proteins.final.fasta.uniref90.blastp.daa
-            
+            # this perl script takes the very large Diamond blastp output .daa file
+            # and returns a tabular blast format file with the taxid as the last column
+
             paste \
                 tg.default.maker.proteins.final.fasta.uniref90.blastp.daa.tagc \
                 <(cut -f13 tg.default.maker.proteins.final.fasta.uniref90.blastp.daa.tagc | cut -f1 -d ";" \
                 | perl taxid_parents_list.pl -) \
             >tg.default.maker.proteins.final.fasta.uniref90.blastp.daa.tagc.taxonhierarchy
 
+            # taxid_parents_list.pl takes a taxid and returns the full NCBI taxonomy path to the root
+            # paste simply appends that to the blast output as an extra column
                 
     c. Classify each protein/gene as **eukaryote** / **Noneukaryote** depending on whether the sum of bitscores of all hits to eukaryotes is >90% sum of bitscores to all hits (and vice-versa). The 90% threshold can be changed. Use **NotSure** for all the others
 
