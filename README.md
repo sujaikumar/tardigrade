@@ -5,17 +5,17 @@ Scripts and relevant processed data files for  Boothby et al 2015 and Koutsovoul
 
 Also see my comment at http://www.igs.umaryland.edu/labs/hotopp/2015/12/05/quick-look-at-the-two-manuscripts-on-tardigrade-lgt/
 
-Note: This does not take into account our additional RNAseq data or our genomic (lack of) coverage data as described in http://biorxiv.org/content/early/2015/12/01/033464 . For now, I just wanted to see how many eukaryote-noneukaryote adjacent gene pairs from UNC's own list of genes could be verified using their own PacBio data.
+Note: This does not take into account our additional RNAseq data or our genomic (lack of) coverage data as described in http://biorxiv.org/content/early/2015/12/01/033464 . For now, I just wanted to see how many eukaryote-noneukaryote adjacent gene pairs from UNC's own list of genes could be verified using the UNC PacBio data.
 
 Because I did not have access to the UNC team's assignment of genes as Metazoan/Bacterial/Fungal etc, I had to redo the taxonomic assignment of all genes so it is possible that my final number will be slightly different from theirs. Rather than pick gene pairs at random, I selected *all* instances where a eukaryote-like gene was next to a non-eukaryote like gene on the same scaffold.
 
-Only 294 gene pairs matched these requirements (euk-noneuk adjacent on same scaffold), and of those, only 10 were fully spanned by a PacBio scaffold.
+- Only **294 gene pairs** matched these requirements (euk-noneuk adjacent on same scaffold), and of those, only **10** were fully spanned by a PacBio scaffold.
 
-Repeating this for Metazoa-Nonmetazoa pairs, 713 such pairs remain (some of the euk-euk pairs become meta-nonmeta, and so the number of meta-nonmeta pairs went up). Of those, only 26 were verified by PacBio scaffolds.
+- Repeating this for Metazoa-Nonmetazoa pairs, 713 such pairs remain (some of the euk-euk pairs become meta-nonmeta, and so the number of meta-nonmeta pairs went up). Of those, only 26 were verified by PacBio scaffolds.
 
 Details of scripts/commands are below (I hope I've not made any mistakes as it is 5am! If someone could double check my numbers I'd be very grateful).
 
-In summary, although UNC state that the PacBio data verify their assembly, the reality (assuming my analysis is correct) is that only 10 euk-noneuk (or 26 metazoa-nonmetazoa) gene pairs are actually verified by their data.
+**In summary, only 10 euk-noneuk (or 26 metazoa-nonmetazoa) gene pairs on UNC assembly are verified by UNC pacbio data.**
 
 ### Overview of steps
 
