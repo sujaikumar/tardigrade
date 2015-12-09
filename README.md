@@ -15,7 +15,7 @@ Repeating this for Metazoa-Nonmetazoa pairs, 713 such pairs remain (some of the 
 
 Details of scripts/commands are below (I hope I've not made any mistakes as it is 430am! If someone could double check my numbers I'd be very grateful).
 
-In summary, although UNC claim that the PacBio data verify their assembly, the reality (assuming my analysis is correct) is that only 10 euk-noneuk (or 26 metazoa-nonmetazoa) gene pairs are actually verified by their own data.
+In summary, although UNC state that the PacBio data verify their assembly, the reality (assuming my analysis is correct) is that only 10 euk-noneuk (or 26 metazoa-nonmetazoa) gene pairs are actually verified by their data.
 
 ### Overview of steps
 
