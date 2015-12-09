@@ -8,6 +8,7 @@ use warnings;
 my  $usage = "taxid_parents_list.pl <file_with_list_of_taxids>\n";
 die $usage if @ARGV == 0;
 
+# get nodes.dmp and names.dmp from ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
 open NODES, "</exports/blast_db/nodes.dmp" or die $usage;
 my %parentof;
 my %taxlevel;
