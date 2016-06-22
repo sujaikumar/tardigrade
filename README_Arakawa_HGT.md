@@ -34,12 +34,16 @@ https://figshare.com/articles/Validation_of_assembled_contigs_of_Hypsibius_dujar
 2. Convert this pdf to a text file:
 
         pdftohtml report.pdf report.html
-        # creates several files. actual data is in reports.html
+
+  pdftohtml creates several files. actual data is in [reports.html](reports.html) (available in this repo)
+
         awk 'NR>=82 && NR <= 115643' reports.html \
         | perl  -pne 's/<br>\n/\t/; s/<hr>//; s/<.*?>//g; s/Page\s+\d+\s+//; s/\s+/\n/g; s/,//g' \
         | grep '\S' | paste - - - - - - \
         | awk '{print $1$6"\t"$2"\t"$3"\t"$4"\t"$5}' >arakawa.cov.txt
 
+  [arakawa.cov.txt](arakawa.cov.txt) available in this repo.
+  
   Apologies for the ugliness of this hack - but it was the quickest way to get the data into a parsable text file from the PDF.
   You can check that it is accurate - all the contigs are there and each row has 5 columns:
   ScaffoldName, Length, Mapped bases, Mean coverage, Standard deviation
